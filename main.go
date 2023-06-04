@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ivo100/multimod/cache"
+	"github.com/ivo100/multimod/mycache"
 	"log"
 	"time"
 )
@@ -13,7 +13,7 @@ import (
 
 func main() {
 	cycle := 100 * time.Millisecond
-	c := cache.New(cycle)
+	c := mycache.New(cycle)
 	defer c.Close()
 
 	c.Set("sticky", "forever", 0)
