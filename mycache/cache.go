@@ -57,6 +57,7 @@ func New(cleaningInterval time.Duration) *Cache {
 
 // Get gets the value for the given key.
 func (cache *Cache) Get(key interface{}) (interface{}, bool) {
+	// generate uni test
 	obj, exists := cache.items.Load(key)
 
 	if !exists {
